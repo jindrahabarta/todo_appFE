@@ -41,7 +41,7 @@ const AddListForm = () => {
         }
 
         axios
-            .post('http://localhost:3000/lists', newList)
+            .post('https://adminbe.onrender.com/lists', newList)
             .then((res) => {
                 if (res.status === 200) {
                     setLists(res.data)

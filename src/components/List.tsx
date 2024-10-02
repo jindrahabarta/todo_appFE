@@ -61,7 +61,7 @@ const List = ({ header, id, todos }: props) => {
 
     const deleteList = () => {
         axios
-            .delete('http://localhost:3000/lists/' + id)
+            .delete('https://adminbe.onrender.com/lists/' + id)
             .then((res) => {
                 setLists(res.data)
             })

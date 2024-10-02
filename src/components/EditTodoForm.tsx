@@ -58,7 +58,7 @@ const EditTodoForm = () => {
         }
 
         axios
-            .post('http://localhost:3000/todos/editTodo', newTodo)
+            .post('https://adminbe.onrender.com/todos/editTodo', newTodo)
             .then((res) => {
                 setTodoCards(res.data)
                 reset()

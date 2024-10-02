@@ -27,7 +27,7 @@ const TodoCardMenu = ({
 
     const deleteCard = () => {
         axios
-            .delete('http://localhost:3000/todos/' + id)
+            .delete('https://adminbe.onrender.com/todos/' + id)
             .then((res) => {
                 setTodoCards(res.data)
             })
@@ -42,7 +42,7 @@ const TodoCardMenu = ({
         const selected = { id: id }
 
         axios
-            .post('http://localhost:3000/todos/markDone', selected)
+            .post('https://adminbe.onrender.com/todos/markDone', selected)
             .then((res) => {
                 if (res.status === 200) {
                     setTodoCards(res.data)

@@ -40,7 +40,7 @@ const AddTodoForm = ({ formId }: { formId: string }) => {
         }
 
         axios
-            .post('http://localhost:3000/todos', newTodo)
+            .post('https://adminbe.onrender.com/todos', newTodo)
             .then((res) => {
                 setTodoCards([...todoCards, res.data.newTodo])
                 window.localStorage.setItem(

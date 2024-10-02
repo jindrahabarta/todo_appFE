@@ -46,13 +46,13 @@ const Windows = () => {
         data: listsData,
         isLoading: listsLoading,
         error: listsError,
-    } = useFetch<list[]>('http://localhost:3000/lists')
+    } = useFetch<list[]>('https://adminbe.onrender.com/lists')
 
     const {
         data: todosData,
         isLoading: todosLoading,
         error: todosError,
-    } = useFetch<todoCard[]>('http://localhost:3000/todos')
+    } = useFetch<todoCard[]>('https://adminbe.onrender.com/todos')
 
     useEffect(() => {
         if (!listsLoading) {
@@ -168,7 +168,9 @@ const Windows = () => {
 
         if (over?.id === 'taskDoneBin') {
             axios
-                .post('http://localhost:3000/todos/markDone', { id: active.id })
+                .post('https://adminbe.onrender.com/todos/markDone', {
+                    id: active.id,
+                })
                 .then((res) => {
                     if (res.status === 200) {
                         setTodoCards(res.data)
@@ -182,7 +184,7 @@ const Windows = () => {
         } else {
             window.localStorage.setItem('todos', JSON.stringify(todoCards))
             axios
-                .put('http://localhost:3000/todos', todoCards)
+                .put('https://adminbe.onrender.com/todos', todoCards)
                 .then(() => {
                     // setTodoCards(res.data)
                 })
