@@ -1,0 +1,36 @@
+:root {
+    --duration: 1s;
+}
+
+@keyframes dotsAnim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#dot-1 {
+    animation-name: dotsAnim;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration);
+    animation-direction: normal;
+}
+#dot-2 {
+    animation-name: dotsAnim;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration);
+    animation-delay: 0.2s;
+    animation-direction: normal;
+}
+#dot-3 {
+    animation-name: dotsAnim;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration);
+    animation-delay: 0.4s;
+    animation-direction: normal;
+}

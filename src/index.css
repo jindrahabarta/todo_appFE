@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+@keyframes cardMenuAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cardMenu {
+    animation-name: cardMenuAnim;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+.editCardInputShow {
+    display: flex;
+}
+
+.editCardInputHide {
+    display: none;
+}
+
+@keyframes detailsCardOpen {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes detailsCardClose {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.detailsCardOpen {
+    display: block;
+    animation-name: detailsCardOpen;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.detailsCardClose {
+    animation-name: detailsCardClose;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
